@@ -1,0 +1,26 @@
+const routeResponseMap = {
+    "/movies": "All Movies Data in JSON format from Mongo DB",
+    "/genres": "All Genres Data in JSON format from Mongo DB",
+    "/artists": "All Artists Data in JSON format from Mongo DB"
+};
+const port = 3000;
+
+http = require("http");
+httpStatus = require("http-status-codes");
+
+app = http.createServer((req, res) => {
+    console.log(req.url)
+
+    res.writeHead(200, {
+        "Content-Type": "text/html"
+    });
+
+    if (routeResponseMap[req.url]) {
+        res.end(routeResponseMap[req.url]);
+    }
+    else {
+        res.end("<h1>Check your URL!</h1>");
+    }
+});
+
+app.listen(port);
