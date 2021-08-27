@@ -73,9 +73,8 @@ class Home extends Component {
         xhr.addEventListener("readystatechange", function () {
           
             if (this.readyState === 4) {
-                debugger;
                 that.setState({
-                    upcomingMovies: JSON.parse(this.responseText).movies
+                    upcomingMovies: JSON.parse(this.responseText)
                 });
             }
         });
@@ -90,7 +89,7 @@ class Home extends Component {
         xhrReleased.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 that.setState({
-                    releasedMovies: JSON.parse(this.responseText).movies
+                    releasedMovies: JSON.parse(this.responseText)
                 });
             }
         });
@@ -99,13 +98,13 @@ class Home extends Component {
         xhrReleased.setRequestHeader("Cache-Control", "no-cache");
         xhrReleased.send(dataReleased);
 
-        // Get filters
+        // Get genres
         let dataGenres = null;
         let xhrGenres = new XMLHttpRequest();
         xhrGenres.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 that.setState({
-                    genresList: JSON.parse(this.responseText).genres
+                    genresList: JSON.parse(this.responseText)
                 });
             }
         });
@@ -120,7 +119,7 @@ class Home extends Component {
         xhrArtists.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 that.setState({
-                    artistsList: JSON.parse(this.responseText).artists
+                    artistsList: JSON.parse(this.responseText)
                 });
             }
         });
@@ -179,7 +178,7 @@ class Home extends Component {
         xhrFilter.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 that.setState({
-                    releasedMovies: JSON.parse(this.responseText).movies
+                    releasedMovies: JSON.parse(this.responseText)
                 });
             }
         });

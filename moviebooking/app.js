@@ -25,7 +25,9 @@ app.use(express.urlencoded({ extended: true }));
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
+    useCreateIndex: true,
     useUnifiedTopology: true,
+    useFindAndModify: false
   })
   .then(() => {
     console.log("Connected to the database!");

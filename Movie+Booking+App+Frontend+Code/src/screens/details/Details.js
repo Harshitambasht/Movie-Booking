@@ -52,7 +52,7 @@ class Details extends Component {
         let xhrMovie = new XMLHttpRequest();
         xhrMovie.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                debugger;
+                
                 that.setState({
                     movie: JSON.parse(this.responseText)[0]
                 });
@@ -103,7 +103,7 @@ class Details extends Component {
                 </div>
                 <div className="flex-containerDetails">
                     <div className="leftDetails">
-                        <img src={movie.poster_url} alt={movie.title} />
+                        <img src={movie.poster_url} alt={movie.title}  style={{width:"100%"}}/>
                     </div>
 
                     <div className="middleDetails">
