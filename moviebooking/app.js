@@ -6,6 +6,7 @@ const db = require("./models");
 const genreRouter = require("./routes/genre.routes");
 const artistRouter = require("./routes/artist.routes");
 const movieRouter = require("./routes/movie.routes");
+const userRouter = require("./routes/user.routes");
 //constants
 const app = express();
 
@@ -44,6 +45,7 @@ app.get("/", (req, res) => {
 app.use("/api/genres", genreRouter);
 app.use("/api/artists", artistRouter);
 app.use("/api/movies", movieRouter);
+app.use("/api/auth", userRouter);
 
 
 module.exports = app; 
