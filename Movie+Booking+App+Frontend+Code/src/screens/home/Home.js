@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
-import Header from '../../common/header/Header';
+import Header from './../../common/header/Header';
 import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
 import Button from '@material-ui/core/Button';
-import logo from '../../assets/logo.svg';
+import logo from './../../assets/logo.svg';
 import Modal from 'react-modal';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';

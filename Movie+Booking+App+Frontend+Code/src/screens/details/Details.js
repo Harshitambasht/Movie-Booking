@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../../common/header/Header';
+import Header from './../../common/header/Header';
 import Typography from '@material-ui/core/Typography';
 import './Details.css';
 import YouTube from 'react-youtube';
@@ -98,7 +98,7 @@ class Details extends Component {
                 <Header id={this.props.match.params.id} baseUrl={this.props.baseUrl} showBookShowButton="true" />
                 <div className="back">
                     <Typography>
-                        <Link to="/">  &#60; Back to Home</Link>
+                        <Link to="/" style={{color:"black"}}>  &#60; Back to Home</Link>
                     </Typography>
                 </div>
                 <div className="flex-containerDetails">
@@ -123,10 +123,10 @@ class Details extends Component {
                             <Typography><span className="bold">Release Date:</span> {new Date(movie.release_date).toDateString()} </Typography>
                         </div>
                         <div>
-                            <Typography><span className="bold"> Rating:</span> {movie.critics_rating}  </Typography>
+                            <Typography><span className="bold"> Rating:</span> {movie.critic_rating}  </Typography>
                         </div>
                         <div className="marginTop16">
-                            <Typography><span className="bold">Plot:</span> <a href={movie.wiki_url}>(Wiki Link)</a> {movie.storyline} </Typography>
+                            <Typography><span className="bold">Plot:</span> <a href={movie.wiki_url}>(Wiki Link)</a> {movie.story_line} </Typography>
                         </div>
                         <div className="trailerContainer">
                             <Typography>
